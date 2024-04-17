@@ -1,0 +1,14 @@
+C:\Users\nicol\Desktop\grafo-mobilidade\bin\Debug\net8.0\grafo-mobilidade.exe
+C:\Users\nicol\Desktop\grafo-mobilidade\bin\Debug\net8.0\grafo-mobilidade.deps.json
+C:\Users\nicol\Desktop\grafo-mobilidade\bin\Debug\net8.0\grafo-mobilidade.runtimeconfig.json
+C:\Users\nicol\Desktop\grafo-mobilidade\bin\Debug\net8.0\grafo-mobilidade.dll
+C:\Users\nicol\Desktop\grafo-mobilidade\bin\Debug\net8.0\grafo-mobilidade.pdb
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.AssemblyInfoInputs.cache
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.AssemblyInfo.cs
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.csproj.CoreCompileInputs.cache
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.dll
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\refint\grafo-mobilidade.dll
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.pdb
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.genruntimeconfig.cache
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\ref\grafo-mobilidade.dll

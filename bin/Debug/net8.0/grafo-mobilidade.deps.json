@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "grafo-mobilidade/1.0.0": {
+        "runtime": {
+          "grafo-mobilidade.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "grafo-mobilidade/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
