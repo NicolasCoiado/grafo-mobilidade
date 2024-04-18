@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("grafo-mobilidade")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3af9f70d6c4914621ae8643b2fb939718ef6a9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4e2420572a77e2f21a8311287722f2c6a9cc74e")]
 [assembly: System.Reflection.AssemblyProductAttribute("grafo-mobilidade")]
 [assembly: System.Reflection.AssemblyTitleAttribute("grafo-mobilidade")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

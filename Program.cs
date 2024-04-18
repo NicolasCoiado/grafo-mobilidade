@@ -33,4 +33,4 @@ estacoesSP.ContectarEstacoes("Corinthians - Itaquera", "Tatuapé", 20);
 estacoesSP.ContectarEstacoes("Tatuapé", "Brás", 10);
 estacoesSP.ContectarEstacoes("Brás", "Sé", 5);
 
-estacoesSP.Djikstra("Corinthians - Itaquera", "Tatuapé");
+estacoesSP.Dijkstra("Corinthians - Itaquera", "Sé");

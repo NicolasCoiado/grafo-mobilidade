@@ -27,3 +27,4 @@ C:\Users\n.martins\Desktop\grafo-mobilidade\obj\Debug\net8.0\refint\grafo-mobili
 C:\Users\n.martins\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.pdb
 C:\Users\n.martins\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.genruntimeconfig.cache
 C:\Users\n.martins\Desktop\grafo-mobilidade\obj\Debug\net8.0\ref\grafo-mobilidade.dll
+C:\Users\nicol\Desktop\grafo-mobilidade\obj\Debug\net8.0\grafo-mobilidade.sourcelink.json

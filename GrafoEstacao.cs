@@ -45,56 +45,92 @@ class GrafoEstacao()
             Console.WriteLine("Uma das estações não foi cadastrada!");
         }
     }
-    // public void DesconectarEstacoes(string estacao1, string estacao2)
-    // {
-    //     if (estacoes.ContainsKey(estacao1))
-    //     {
-    //         estacoes[estacao1].RemoveAll(conexao => conexao.Item1 == estacao2);
-    //         estacoes[estacao2].RemoveAll(conexao => conexao.Item1 == estacao1);
-    //     }
-    //     else
-    //     {
-    //         Console.WriteLine("Uma das estações não foi cadastrada!");
-    //     }
-    // }
     public void ListarEstacoes()
     {
-        Console.WriteLine(estacoes);
         foreach (var estacao in estacoes)
         {
-            foreach (var conexoes in estacao.Value)
+            Console.WriteLine(estacao.Key);
+            foreach (var conexao in estacao.Value)
             {
-                Console.WriteLine(conexoes);
+                Console.WriteLine("-->" + conexao.EstacaoDestino + " | Tempo:" + conexao.Tempo);
             }
+            Console.WriteLine(" ");
         }
-
-        // foreach (var estacao in estacoes)
-        // {
-        //     Console.WriteLine(estacao.Key);
-        //     foreach (var conexoes in estacao.Value)
-        //     {
-        //         Console.WriteLine("--> " + conexoes.Item1 + " | Tempo:" + conexoes.Item2);
-        //     }
-        //     Console.WriteLine("===========");
-        // }
     }
-
-    public void Djikstra(string eInicial, string eDestino)
+    public void Dijkstra(string eInicial, string eDestino)
     {
-        Dictionary<string, List<Tuple<string, int, string>>> tempos = new Dictionary<string, List<Tuple<string, int, string>>>();
-
-        if (estacoes.ContainsKey(eInicial) && estacoes.ContainsKey(eDestino))
-        {
-            foreach (var estacao in estacoes[eInicial])
-            {
-                Console.WriteLine(estacao.Item1);
-                Console.WriteLine(estacao.Item2);
-                // tempos.Add(new Tuple<string, int, string>(estacao, estacao.Item2));
-            }
-        }
-        else
+        if (!estacoes.ContainsKey(eInicial) || !estacoes.ContainsKey(eDestino))
         {
             Console.WriteLine("Uma das estações não foi cadastrada!");
+            return;
         }
+
+        Dictionary<string, int> custos = new Dictionary<string, int>();
+        Dictionary<string, string> predecessores = new Dictionary<string, string>();
+        HashSet<string> visitados = new HashSet<string>();
+
+        foreach (var estacao in estacoes)
+        {
+            custos.Add(estacao.Key, int.MaxValue);
+            predecessores.Add(estacao.Key, null);
+        }
+
+        custos[eInicial] = 0;
+
+        while (visitados.Count < estacoes.Count)
+        {
+            string estacaoAtual = MenorCusto(custos, visitados);
+            visitados.Add(estacaoAtual);
+
+            foreach (var conexao in estacoes[estacaoAtual])
+            {
+                int novoCusto = custos[estacaoAtual] + conexao.Tempo;
+                if (novoCusto < custos[conexao.EstacaoDestino])
+                {
+                    custos[conexao.EstacaoDestino] = novoCusto;
+                    predecessores[conexao.EstacaoDestino] = estacaoAtual;
+                }
+            }
+        }
+
+        List<string> caminho = ReconstruirCaminho(predecessores, eDestino);
+        caminho.Reverse();
+        Console.WriteLine("Caminho mais curto de " + eInicial + " para " + eDestino + ":");
+        foreach (var estacao in caminho)
+        {
+            Console.Write(estacao + " -> ");
+        }
+        Console.WriteLine("Chegada!");
+        Console.WriteLine("Tempo total: " + custos[eDestino]);
+    }
+    private string MenorCusto(Dictionary<string, int> custos, HashSet<string> visitados)
+    {
+        int menorCusto = int.MaxValue;
+        string estacaoMenorCusto = null;
+
+        foreach (var estacao in custos)
+        {
+            if (!visitados.Contains(estacao.Key) && estacao.Value < menorCusto)
+            {
+                menorCusto = estacao.Value;
+                estacaoMenorCusto = estacao.Key;
+            }
+        }
+
+        return estacaoMenorCusto;
+    }
+
+    private List<string> ReconstruirCaminho(Dictionary<string, string> predecessores, string destino)
+    {
+        List<string> caminho = new List<string>();
+        string estacaoAtual = destino;
+
+        while (estacaoAtual != null)
+        {
+            caminho.Add(estacaoAtual);
+            estacaoAtual = predecessores[estacaoAtual];
+        }
+
+        return caminho;
     }
 }
